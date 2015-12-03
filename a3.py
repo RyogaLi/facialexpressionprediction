@@ -81,7 +81,7 @@ if __name__ == '__main__':
 	# load data from .mat file
 	# returns a dictionary with keys 
 	# ['__globals__', 'tr_labels', '__header__', 'tr_identity', '__version__', 'tr_images']
-	image_data, labels, identity = loadMatFile('labeled_images.mat')
+	image_data, labels, identity = loadMatFile('../a3data/labeled_images.mat')
 
 	# # ramdom select data from data set as traina and validation sets
 	# data_train, data_valid, label_train, label_valid = train_test_split(image_data, labels, test_size=0.33, random_state=42)
