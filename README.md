@@ -1,2 +1,0 @@
-# facialexpressionprediction
-facial expression prediction

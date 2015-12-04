@@ -19,3 +19,18 @@ def knn(k, train_data, train_label, valid_data, valid_targets):
 	# correctness[k] = correctRate
 	# print correctness
 	return correctRate
+
+
+def plotCorrectness(correctness, plot_title):
+	"""
+	plot keys VS values in correctness
+	"""
+	x = correctness.keys()
+	y = correctness.values()
+	plt.xlabel('k-Values')
+	plt.ylabel('Correctness')
+	plt.title(plot_title)
+	plt.ylim(1,100)
+	plt.xlim(0,11)
+	plt.plot(x, y, ".")
+	plt.show()
