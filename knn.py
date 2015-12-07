@@ -6,20 +6,19 @@ def knn(k, train_data, train_label, valid_data, valid_targets):
 	neigh.fit(train_data, train_label)
 
 	predict_labels = neigh.predict(valid_data)
+	
+	return predict_labels
+
+def calculateCorr(predict_labels, valid_targets):
 	correctness = {}
 	correctPrediction = 0
-	# UNCOMMENT next line if you want to calculate correct prediction rate for training data
-	# predict_labels = knn(k, train_data, train_labels, valid_data)
-	# predict_labels = run_knn(k, train_inputs, train_targets, test_inputs)
+
 	for i in range(len(predict_labels)):
 		if predict_labels[i] == valid_targets[i]:
 			correctPrediction += 1
 
 	correctRate = (float(correctPrediction)/len(predict_labels)) * 100
-	# correctness[k] = correctRate
-	# print correctness
 	return correctRate
-
 
 def plotCorrectness(correctness, plot_title):
 	"""
